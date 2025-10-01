@@ -1,0 +1,17 @@
+id: githubmcp
+runtime: docker
+base: .
+entry: Dockerfile
+
+# Optional: declare env vars your server needs
+env:
+  - name: GITHUB_PERSONAL_ACCESS_TOKEN
+    required: true
+  - name: GITHUB_READ_ONLY
+    required: false
+  - name: GITHUB_TOOLSETS
+    required: false
+  - name: GITHUB_DYNAMIC_TOOLSETS
+    required: false
+  - name: GITHUB_HOST
+    required: false
