@@ -3,10 +3,10 @@ runtime: docker
 base: .
 entry: Dockerfile
 
-# Optional: declare env vars your server needs
+# Env vars (all optional now)
 env:
   - name: GITHUB_PERSONAL_ACCESS_TOKEN
-    required: true
+    required: false
   - name: GITHUB_READ_ONLY
     required: false
   - name: GITHUB_TOOLSETS
