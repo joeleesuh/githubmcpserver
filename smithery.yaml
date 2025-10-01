@@ -1,16 +1,34 @@
-id: githubmcp
+id: github-mcp
 runtime: docker
 base: .
 entry: Dockerfile
 
 env:
   - name: GITHUB_PERSONAL_ACCESS_TOKEN
+    description: >
+      Optional GitHub Personal Access Token (PAT) for authenticated requests.
+      Without this, the server will run in public/anonymous mode with 60 req/hr rate limits.
     required: false
+
   - name: GITHUB_READ_ONLY
+    description: >
+      If set to 1, disables mutation tools (like creating issues or PRs).
+      Recommended for safety.
     required: false
+
   - name: GITHUB_TOOLSETS
+    description: >
+      Comma-separated list of toolsets to enable. Options include:
+      repos, issues, pull_requests, actions, code_security, all.
+      Defaults to a safe subset.
     required: false
+
   - name: GITHUB_DYNAMIC_TOOLSETS
+    description: >
+      If set to 1, enables dynamic toolset loading (beta).
     required: false
+
   - name: GITHUB_HOST
-    required: false
+    description: >
+      Custom GitHub API host, e.g. https://github.mycompany.com for GH Enterprise.
+      Defaults to https:/
