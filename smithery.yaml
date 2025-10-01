@@ -3,7 +3,6 @@ runtime: docker
 base: .
 entry: Dockerfile
 
-# Env vars (all optional now)
 env:
   - name: GITHUB_PERSONAL_ACCESS_TOKEN
     required: false
