@@ -2,7 +2,7 @@ id: github-mcp
 runtime: docker
 base: .
 entry: Dockerfile
-
+ 
 env:
   - name: GITHUB_PERSONAL_ACCESS_TOKEN
     description: >
